@@ -22,13 +22,9 @@
         "Bruce",
       ];
       const blackListArr = ["Phil", "Lola"];
-      
-      function isOnBlackList(person) {
-        if (blackListArr.includes(person)) {
-        return person;
-      }};
 
-      let refusedArr = peopleArr.filter(isOnBlackList);
+      let admittedArr = peopleArr.filter(person => ! blackListArr.includes(person));
+      let refusedArr = peopleArr.filter(person => blackListArr.includes(person));
 
       const admitted = document.querySelector(".admitted");
       const refused = document.querySelector(".refused");
@@ -36,12 +32,27 @@
       refused.textContent = "Refuse: ";
 
       // loop starts here
-
-      for (let i = 0; i < peopleArr.length-1; i++) {
-        if ();
+      // Fill admitted text from admittedArr
+      for (let i = 0; i < admittedArr.length; i++) {
+        if (i === admittedArr.length - 1) {
+          admitted.textContent += `and ${admittedArr[i]}.`;
+          break;
+        } else {
+          admitted.textContent += `${admittedArr[i]}, `;
+        };
       };
 
-      // admitted.textContent += ;
+      // Fill refused text from refusedArr
+      for (let i = 0; i < refusedArr.length; i++) {
+        if (i === refusedArr.length - 1) {
+          refused.textContent += `and ${refusedArr[i]}.`;
+          break;
+        } else {
+          refused.textContent += `${refusedArr[i]}, `;
+        };
+      };
+
+      // 
     </script>
   </body>
 </html>
