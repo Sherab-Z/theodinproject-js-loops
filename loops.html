@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let myObject = {
+        first: 1,
+        second: "something else",
+        third: "another thing",
+        fourth: "how about one more thing",
+        fifth: 3.5,
+      };
+      const myArr = ["a", 1, "text", myObject];
+
+      function getType(arr) {
+      for (const item of myArr) {
+        console.log(item instanceof Number);
+      }
+    }
+    </script>
+  </body>
+</html>

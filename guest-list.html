@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Guest List</title>
+  </head>
+  <body>
+    <p class="admitted"></p>
+    <p class="refused"></p>
+    <script>
+      const peopleArr = [
+        "Chris",
+        "Anne",
+        "Colin",
+        "Terri",
+        "Phil",
+        "Lola",
+        "Sam",
+        "Kay",
+        "Bruce",
+      ];
+      const blackListArr = ["Phil", "Lola"];
+      
+      function isOnBlackList(person) {
+        if (blackListArr.includes(person)) {
+        return person;
+      }};
+
+      let refusedArr = peopleArr.filter(isOnBlackList);
+
+      const admitted = document.querySelector(".admitted");
+      const refused = document.querySelector(".refused");
+      admitted.textContent = "Admit: ";
+      refused.textContent = "Refuse: ";
+
+      // loop starts here
+
+      for (let i = 0; i < peopleArr.length-1; i++) {
+        if ();
+      };
+
+      // admitted.textContent += ;
+    </script>
+  </body>
+</html>
