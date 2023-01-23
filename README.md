@@ -1,0 +1,1 @@
+A collection of mini-projects to learn JavaScript Loops on The Odin Project course. These are from the lesson Foundations > JavaScript Basics > Fundamentals Part 4.
