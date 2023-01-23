@@ -23,8 +23,8 @@
       ];
       const blackListArr = ["Phil", "Lola"];
 
-      let admittedArr = peopleArr.filter(person => ! blackListArr.includes(person));
-      let refusedArr = peopleArr.filter(person => blackListArr.includes(person));
+//      let admittedArr = peopleArr.filter(person => ! blackListArr.includes(person));
+//      let refusedArr = peopleArr.filter(person => blackListArr.includes(person));
 
       const admitted = document.querySelector(".admitted");
       const refused = document.querySelector(".refused");
@@ -32,27 +32,19 @@
       refused.textContent = "Refuse: ";
 
       // loop starts here
-      // Fill admitted text from admittedArr
-      for (let i = 0; i < admittedArr.length; i++) {
-        if (i === admittedArr.length - 1) {
-          admitted.textContent += `and ${admittedArr[i]}.`;
-          break;
+      // Fill display text based on conditions
+      for (let i = 0; i < peopleArr.length; i++) {
+        if (blackListArr.includes(peopleArr[i])) {
+          refused.textContent += `${peopleArr[i]}, `;
         } else {
-          admitted.textContent += `${admittedArr[i]}, `;
+          admitted.textContent += `${peopleArr[i]}, `;
         };
       };
 
-      // Fill refused text from refusedArr
-      for (let i = 0; i < refusedArr.length; i++) {
-        if (i === refusedArr.length - 1) {
-          refused.textContent += `and ${refusedArr[i]}.`;
-          break;
-        } else {
-          refused.textContent += `${refusedArr[i]}, `;
-        };
-      };
+      // Add '.' to end of each list
+      admitted.textContent = admitted.textContent.slice(0, admitted.textContent.length - 2) + '.';
+      refused.textContent = refused.textContent.slice(0, refused.textContent.length - 2) + '.';
 
-      // 
     </script>
   </body>
 </html>
