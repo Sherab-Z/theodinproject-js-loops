@@ -30,6 +30,13 @@
     const list = document.createElement('ul');
 
     // Add your code here
+    // Loop: for each item in myArray, 
+    for (const item of myArray) {
+      //  Append to list: a li element containing the item string as its text content
+      let listEl = document.createElement('li');
+      listEl.textContent = item;
+      list.appendChild(listEl);
+    }
 
     // Don't edit the code below here!
 
