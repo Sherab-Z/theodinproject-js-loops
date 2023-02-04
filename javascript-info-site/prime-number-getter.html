@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Prime Number Getter</title>
+  </head>
+  <body>
+    <script>
+      let n = 250;
+      let primeArr = [];
+
+      mainLoop: for (let i = 0; i <= n; i++) {
+        // Outer loop iterates over all integers less than n
+        for (let j = 2; j < i; j++) {
+          // Inner loop checks whether current i value is a prime. If so, it pushes it to primeArr
+          if (i % j === 0) {
+            // If current i value is divisible by a value less than it then is not prime, so skip it
+            continue mainLoop;
+          } else if (j === i - 1) {
+            // If inner loop completes for current i value and no j values were divisors of i, then i is prime - so add i to primeArr
+            primeArr.push(i);
+          }
+        }
+      }
+      console.log(primeArr);
+    </script>
+  </body>
+</html>
